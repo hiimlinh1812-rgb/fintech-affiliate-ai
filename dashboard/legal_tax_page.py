@@ -9,8 +9,14 @@ import streamlit as st
 import pandas as pd
 
 
-def render_legal_tax_page(df: pd.DataFrame = None):
+def render_legal_tax_page(df: pd.DataFrame = None, *args, **kwargs):
     """Renders educational information and simulation for tax obligations."""
+    if df is None:
+        try:
+            from services.data_loader import load_affiliate_data
+            df, _ = load_affiliate_data()
+        except Exception:
+            df = pd.DataFrame()
     st.markdown("## ⚖️ Hỗ Trợ Pháp Lý & Module Cảnh Báo Thuế TNCN")
     st.caption("Căn cứ theo Luật Thuế TNCN số 109/2025/QH15 và Luật Thương mại điện tử số 122/2025/QH15")
 
