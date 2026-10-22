@@ -167,7 +167,7 @@ def main():
     elif "4. Trợ Lý AI Chatbot" in nav_choice:
         render_chatbot_page(df, filters_dict)
     elif "5. Pháp Lý & Thuế" in nav_choice:
-        render_legal_tax_page()
+        render_legal_tax_page(df)
 
 
 if __name__ == "__main__":
