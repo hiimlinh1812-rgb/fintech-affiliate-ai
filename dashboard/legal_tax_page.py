@@ -68,9 +68,10 @@ def render_legal_tax_page(df: pd.DataFrame = None, *args, **kwargs):
     # Compliance Alert Banner
     if total_commission > 100_000_000:
         st.warning(
-            f"🔔 **CẢNH BÁO NGHĨA VỤ THUẾ (Luật 109/2025/QH15 & Luật TMĐT 122/2025/QH15):**\n\n"
-            f"Thu nhập hoa hồng tích lũy của bạn đạt **{int(total_commission):,} ₫** (vượt ngưỡng 100 triệu đồng/năm). "
-            f"Bạn thuộc diện bắt buộc phải tổng hợp chứng từ khấu trừ thuế TNCN điện tử từ các sàn để thực hiện **Quyết toán thuế TNCN cuối năm** trước ngày 30/04."
+            f"🔔 **CẢNH BÁO NGHĨA VỤ RÀ SOÁT & QUYẾT TOÁN THUẾ:**\n\n"
+            f"Thu nhập hoa hồng tích lũy của bạn đạt **{int(total_commission):,} ₫** "
+            f"(vượt mốc tham chiếu rà soát thuế 100 triệu đồng/năm hoặc tùy chỉnh theo ngưỡng miễn thuế mới của Luật Thuế TNCN số 109/2025/QH15). "
+            f"Bạn thuộc diện cần tổng hợp chứng từ khấu trừ thuế TNCN điện tử từ các sàn để thực hiện **rà soát và quyết toán thuế TNCN cuối năm** trước ngày 30/04."
         )
     else:
         st.info(
@@ -89,13 +90,15 @@ def render_legal_tax_page(df: pd.DataFrame = None, *args, **kwargs):
         st.markdown(
             """
             - **Luật Thuế TNCN số 109/2025/QH15:**
-              - Quy định rõ thu nhập từ hoạt động tiếp thị liên kết, livestream bán hàng hưởng hoa hồng là thu nhập từ tiền lương, tiền công hoặc dịch vụ kinh doanh trực tuyến.
-              - Nâng cao tính tự động hóa trong quản lý thuế đối với kinh tế số; xác định rõ trách nhiệm của cá nhân trong việc kê khai bổ sung nếu có nhiều nguồn thu nhập cùng lúc từ nhiều nền tảng.
+              - Nâng mức giảm trừ gia cảnh cho bản thân người nộp thuế lên 15,5 triệu đồng/tháng (186 triệu đồng/năm) và điều chỉnh nâng ngưỡng doanh thu miễn thuế của cá nhân kinh doanh.
+              - Thu nhập hoa hồng tiếp thị liên kết của cá nhân chịu thuế tạm khấu trừ 10% tại nguồn theo từng lần chi trả từ 2.000.000 đồng trở lên.
+              - Đối với mô hình Hộ/Cá nhân kinh doanh đăng ký kê khai: Áp dụng nộp thuế theo tỷ lệ 7% trên doanh thu dịch vụ (gồm 5% thuế GTGT và 2% thuế TNCN theo quy định pháp luật về thuế hiện hành).
             - **Luật Thương mại điện tử số 122/2025/QH15:**
-              - Quy định rõ trách nhiệm của chủ quản sàn giao dịch TMĐT (Shopee, Lazada, TikTok Shop) trong việc:
-                1. Khấu trừ, kê khai và nộp thuế thay cho cá nhân kinh doanh / cá nhân làm tiếp thị liên kết.
-                2. Cung cấp dữ liệu giao dịch định kỳ cho cơ quan quản lý nhà nước qua cổng điện tử.
-                3. Xuất chứng từ khấu trừ thuế điện tử cho cá nhân làm căn cứ quyết toán thuế.
+              - Quy định quản lý sàn TMĐT, định danh người bán / KOC / livestreamer trên nền tảng kinh tế số.
+              - Quy định trách nhiệm của chủ quản sàn giao dịch TMĐT (Shopee, Lazada, TikTok Shop) trong việc:
+                1. Khấu trừ, kê khai và nộp thuế thay cho cá nhân kinh doanh / cá nhân làm tiếp thị liên kết trên sàn.
+                2. Cung cấp dữ liệu giao dịch định kỳ cho cơ quan thuế qua cổng thông tin điện tử.
+                3. Xuất chứng từ khấu trừ thuế điện tử cho cá nhân làm căn cứ quyết toán thuế cuối năm.
             """
         )
 
