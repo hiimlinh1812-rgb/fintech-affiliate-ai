@@ -128,10 +128,11 @@ Khi trình chiếu trước giáo viên hoặc chia sẻ với các bạn, hãy 
   5. *Tư vấn tối ưu* $\rightarrow$ Trả về danh mục các gợi ý chiến lược.
 - **Điểm ưu việt:** Câu trả lời lấy trực tiếp từ dữ liệu thực tế của Dashboard, không gọi OpenAI, không tốn phí và không bao giờ bịa đặt số liệu.
 
-### 3.6. Tab 5: Hỗ Trợ Pháp Lý & Chính Sách Thuế
-- Hướng dẫn quy định thuế TNCN tiếp thị liên kết theo **Thông tư 40/2021/TT-BTC** (tạm khấu trừ 10% tại nguồn cho khoản chi trả từ 2.000.000đ trở lên).
-- Nhắc nhở các mốc quyết toán thuế quan trọng (31/03 và 30/04).
-- Có khung cảnh báo miễn trừ trách nhiệm pháp lý rõ ràng, khẳng định đây là thông tin mẫu, không thay thế cơ quan thuế.
+### 3.6. Tab 5: Hỗ Trợ Pháp Lý & Module Cảnh Báo Thuế TNCN
+- Căn cứ theo **Luật Thuế TNCN số 109/2025/QH15** và **Luật Thương mại điện tử số 122/2025/QH15**.
+- Tự động tính toán số thuế TNCN tạm khấu trừ 10% tại nguồn do sàn TMĐT thực hiện và hoa hồng thực nhận sau thuế.
+- Kích hoạt banner cảnh báo nghĩa vụ rà soát và quyết toán thuế cuối năm khi thu nhập/doanh thu tích lũy vượt ngưỡng thiết lập (ví dụ: mốc tham chiếu 100 triệu đồng/năm hoặc tùy chỉnh theo ngưỡng miễn thuế mới của Luật Thuế TNCN số 109/2025/QH15).
+- Nhắc nhở các mốc quyết toán thuế quan trọng (31/03 và 30/04), kèm khung cảnh báo miễn trừ trách nhiệm pháp lý rõ ràng.
 
 ---
 
